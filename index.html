@@ -7,17 +7,27 @@
 <body>
     <h1>Testing API Connection</h1>
     <script>
-   fetch("https://script.google.com/macros/s/AKfycbxd7iVeIAXwuJXMRplP_YnFgA1XMQQlTUgz81B0-kuHODtkVp7Z-ojiWpJbh-qXeMks/exec", {
+  
+    
+
+
+
+fetch("https://script.google.com/macros/s/AKfycbxd7iVeIAXwuJXMRplP_YnFgA1XMQQlTUgz81B0-kuHODtkVp7Z-ojiWpJbh-qXeMks/exec", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({ newValue: 42 }) // Replace with the desired number to update
+    body: JSON.stringify({ newValue: 42 }),
+    mode: "no-cors" // Prevents the browser from enforcing CORS restrictions
 })
-.then(response => response.text())
-.then(data => console.log("Server Response:", data))
+.then(response => console.log("Sent request (response might be opaque)"))
 .catch(error => console.error("API Error:", error));
 
+
     </script>
+
+
+
+
+
+
 </body>
 </html>
-
-
